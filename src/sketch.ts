@@ -76,10 +76,11 @@ function draw() {
 // -------------------
 
 function setup() {
-    createCanvas(W, H, WEBGL);
+    createCanvas(windowWidth, windowHeight, WEBGL);
     easyCam = createEasyCam();
 
 
 }
-
-
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }

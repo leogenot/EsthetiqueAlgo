@@ -44,8 +44,11 @@ function draw() {
     start += StartInclinaison;
 }
 function setup() {
-    createCanvas(W, H, WEBGL);
+    createCanvas(windowWidth, windowHeight, WEBGL);
     easyCam = createEasyCam();
+}
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }
 var __ASPECT_RATIO = 1;
 var __MARGIN_SIZE = 25;

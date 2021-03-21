@@ -34,7 +34,7 @@ function draw() {
         beginShape(TRIANGLE_STRIP);
         for (var x = 0; x < params.Colonnes; x++) {
             vertex(x * params.Echelle, y * params.Echelle, map(noise(Xdecal, Ydecal, Zdecal), 0, 1, params.hauteurMin, params.hauteurMax));
-            vertex(x * params.Echelle, (y + 1) * params.Echelle, map(noise(Xdecal, Ydecal, Zdecal), 0, 1, params.hauteurMin, params.hauteurMax));
+            vertex(x * params.Echelle, (y + 1) * params.Echelle, map(noise(Xdecal, Ydecal + params.Inclinaison, Zdecal), 0, 1, params.hauteurMin, params.hauteurMax));
             Xdecal += params.Inclinaison;
         }
         Ydecal += params.Inclinaison;
